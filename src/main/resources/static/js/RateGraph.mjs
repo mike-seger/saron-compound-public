@@ -17,7 +17,8 @@ function create() {
 	var options = {
 		series: [],
 		chart: {
-			//foreColor: '#ccc',
+			foreColor: '#9fb0c4',
+			background: 'transparent',
 			type: 'area',
 			stacked: false,
 			height: 300,
@@ -35,6 +36,7 @@ function create() {
 			}
 		},
 		grid: {
+			borderColor: '#2a3a4e',
 			padding: {
 				left: 8,
 				right: 36
@@ -54,7 +56,10 @@ function create() {
 		},
 		title: {
 			text: 'SARON Rates',
-			align: 'left'
+			align: 'left',
+			style: {
+				color: '#d6deea'
+			}
 		},
 		stroke: {
 			curve: 'stepline',
@@ -72,18 +77,30 @@ function create() {
 		},
 		yaxis: {
 			labels: {
+				style: {
+					colors: '#9fb0c4'
+				},
 				formatter: function(val) {
 					return NumberUtils.formattedRound(Number(val), 3)
 				},
 			},
 			title: {
-				text: 'Rate'
+				text: 'Rate',
+				style: {
+					color: '#9fb0c4'
+				}
 			},
 		},
 		xaxis: {
 			type: 'datetime',
+			labels: {
+				style: {
+					colors: '#9fb0c4'
+				}
+			}
 		},
 		tooltip: {
+			theme: 'dark',
 			//enabled: false,
 			shared: false,
 			marker: {
@@ -130,6 +147,7 @@ function create() {
 			// },
 		},
 		theme: {
+			mode: 'dark',
 			palette: 'palette3'
 		},
 

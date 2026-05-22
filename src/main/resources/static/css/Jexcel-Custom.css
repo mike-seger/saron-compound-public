@@ -73,17 +73,18 @@
 .jexcel > tbody > tr > td:first-child,
 .jexcel > tfoot > tr > td,
 .jexcel > thead > tr > td {
-	background-color: #e8ecf0;
+	background-color: #202c3b;
+	color: #d6deea;
 }
 
 .jexcel_tabs .jexcel_tab_link.selected,
 .jexcel > tbody > tr.selected > td:first-child,
 .jexcel > thead > tr > td.selected{
-	background-color:rgb(206, 226, 255);
+	background-color: #2b3e57;
 }
 
 .jexcel .highlight {
-	background-color:rgba(186, 214, 255, 0.2);
+	background-color: rgba(99, 179, 237, 0.22);
 }
 
 .jexcel .editor .jexcel_richtext, .jexcel .editor > input {
@@ -91,7 +92,7 @@
 }
 
 .jexcel_filter {
-	border: 1px solid #ccc;
+	border: 1px solid #2c3b4f;
 	margin: 0 0 -1px 1px;
 }
 
@@ -107,7 +108,7 @@
 
 .jexcel > thead > tr:nth-child(2) > td {
 	border-top: 0;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #2c3b4f;
 }
 
 .jexcel_overflow > tbody > tr:last-child > td {
@@ -121,9 +122,9 @@
 
 .jexcel_content {
 	margin-right: 0.7em;
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
+	border-top: 1px solid #2c3b4f;
+	border-bottom: 1px solid #2c3b4f;
+	border-right: 1px solid #2c3b4f;
 }
 
 .jexcel .jexcel_overflow {
@@ -132,7 +133,7 @@
 
 .jexcel {
 	border-bottom: 0;
-	border-right: 1px solid #ccc;
+	border-right: 1px solid #2c3b4f;
 }
 
 .jexcel_content::-webkit-scrollbar {
@@ -163,7 +164,59 @@
 .jexcel_content::-webkit-scrollbar-thumb {
 	min-width: 18px;
 	min-height: 18px;
-	background-color: #aaa;
+	background-color: #42556c;
+}
+
+.jexcel {
+	background-color: #161d27;
+	color: #d6deea;
+}
+
+.jexcel > tbody > tr > td {
+	background-color: #161d27;
+	color: #d6deea;
+	border-color: #2c3b4f;
+}
+
+.jexcel > tbody > tr:nth-child(even) > td {
+	background-color: #1a2330;
+}
+
+.jexcel > tbody > tr > td.readonly {
+	background-color: #1f2a38;
+}
+
+.jexcel thead .jexcel_freezed,
+.jexcel tfoot .jexcel_freezed,
+.jexcel tbody .jexcel_freezed {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	border-right: 1px solid #2c3b4f;
+}
+
+.jexcel tbody .jexcel_freezed {
+	background-color: #202c3b;
+}
+
+#saron-table,
+#saron-table .jexcel_container,
+#saron-table .jexcel_content,
+#saron-table .jexcel,
+#saron-table .jexcel_corner {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	filter: none !important;
+	outline: none;
+}
+
+.jexcel .editor .jexcel_richtext,
+.jexcel .editor > input,
+.jexcel > tbody > tr > td > input,
+.jexcel > tbody > tr > td > textarea,
+.jexcel > tbody > tr > td > select {
+	color: #d6deea;
 }
 
 /* Safari specific */

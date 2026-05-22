@@ -1,7 +1,15 @@
 :root {
-    --button-color: rgb(41, 139, 168);
-    --active-color: #4974c5;
-	--font-family: sans-serif
+    --button-color: #2f4858;
+    --active-color: #63b3ed;
+	--font-family: sans-serif;
+	--bg: #0f141b;
+	--surface: #161d27;
+	--surface-alt: #1c2633;
+	--surface-muted: #223041;
+	--text: #d6deea;
+	--text-muted: #9fb0c4;
+	--border: #2c3b4f;
+	--shadow: rgba(0, 0, 0, 0.55);
 }
 
 body, html {
@@ -18,19 +26,21 @@ html {
 body {
 	overflow-x: auto;
 	width: 100%;
+	background-color: var(--bg);
+	color: var(--text);
 }
 
 body::-webkit-scrollbar {
 	min-width: 10px;
 	min-height: 10px;
-	color: #ccc;
-	background-color: #ccc;
+	color: #415369;
+	background-color: #1a2431;
 }
 
 body::-webkit-scrollbar-thumb {
 	min-width: 10px;
 	min-height: 10px;
-	background-color: #aaa;
+	background-color: #42556c;
 }
 
 body::-webkit-scrollbar-button { width: 0; }
@@ -56,7 +66,7 @@ a:active {
 }
 
 #saron-table tr:nth-child(even) {
-	background-color: #eee;
+	background-color: #1a2330;
 }
 
 #importtools {
@@ -77,7 +87,9 @@ a:active {
 }
 
 .input {
-	border: 1px solid rgb(161, 161, 161);
+	border: 1px solid var(--border);
+	background-color: var(--surface);
+	color: var(--text);
 	width: 110px;
 }
 
@@ -90,10 +102,10 @@ a:active {
   border-width: 0;
   outline: none;
   border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+	box-shadow: 0 1px 6px var(--shadow);
 
-  background-color: #6d7381;
-  color: #ecf0f1;
+	background-color: #314255;
+	color: var(--text);
 
   transition: background-color .3s;
 }
@@ -127,20 +139,21 @@ a:active {
 	border: 0;
 	width: 26px;
 	height: 26px;
-	background-color: white;
+	background-color: transparent;
 	background-image: url(../img/info.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	filter: brightness(1.15);
 }
 
 #rate-display {
-	background-color: white;
-	/* background-color: black; */
+	background-color: var(--surface);
 	width: calc(100% - 10px) !important;
 	height: 250px;
 	min-height: 299px !important;
 	margin: 0 auto;
-	box-shadow: 0 22px 3px -16px rgba(0,0,0, 0.08);
+	border: 1px solid var(--border);
+	box-shadow: 0 22px 18px -18px var(--shadow);
 }
 
 #saronInfoMessage .jmodal_title {
@@ -159,7 +172,8 @@ a:active {
 
 .point-annotation {
 	border-color:rgb(41, 139, 168);
-	background-color: white;
+	background-color: var(--surface-alt);
+	color: var(--text);
 	transition: opacity 0.5s ease;
 }
 
@@ -168,4 +182,85 @@ a:active {
 
 .jdropdown-default .jdropdown-content {
     max-height: initial;
+}
+
+#custom-parameters table td,
+.text-element,
+#serverText,
+#link-table {
+	color: var(--text);
+}
+
+#custom-parameters table {
+	background: transparent;
+}
+
+#dropzone.dragging {
+	box-shadow: 0 0 0 2px var(--active-color) inset;
+}
+
+/* jSuites controls */
+.jdropdown-container,
+.jdropdown-header,
+.jdropdown-content,
+.jdropdown-picker,
+.jdropdown-item {
+	background-color: var(--surface) !important;
+	color: var(--text) !important;
+	border-color: var(--border) !important;
+}
+
+.jdropdown-item:hover,
+.jdropdown-item.jdropdown-selected {
+	background-color: var(--surface-muted) !important;
+}
+
+.jcalendar,
+.jcalendar-content,
+.jcalendar-set-day,
+.jcalendar-controls,
+.jcalendar table td,
+.jcalendar table th {
+	background-color: var(--surface) !important;
+	color: var(--text) !important;
+	border-color: var(--border) !important;
+}
+
+.jcalendar-selected,
+.jcalendar table td:hover {
+	background-color: var(--surface-muted) !important;
+}
+
+/* jSuites modal */
+.jmodal,
+.jmodal_content,
+.jmodal_title {
+	background-color: var(--surface) !important;
+	color: var(--text) !important;
+	border-color: var(--border) !important;
+}
+
+.jmodal_title {
+	border-bottom: 1px solid var(--border) !important;
+}
+
+/* ApexCharts */
+.apexcharts-canvas,
+.apexcharts-canvas text {
+	color: var(--text) !important;
+	fill: var(--text-muted) !important;
+}
+
+.apexcharts-gridline,
+.apexcharts-xaxis line,
+.apexcharts-yaxis line {
+	stroke: #2a3a4e !important;
+}
+
+.apexcharts-tooltip,
+.apexcharts-xaxistooltip,
+.apexcharts-yaxistooltip {
+	background: var(--surface-alt) !important;
+	border-color: var(--border) !important;
+	color: var(--text) !important;
 }
